@@ -1,0 +1,21 @@
+{% extends 'poll/base.html' %} {% block content %}
+
+<div class="container">
+  <h1 class="content-title">Register a new user</h1>
+  <div class="form" id="registration-form">
+    <form action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+
+      <label for="username" class="login-label">Username</label>
+      {{ form.username }} <br />
+
+      <label for="password" class="login-label">Password</label>
+      {{ form.password }} <br />
+
+      <input type="submit" value="Register" class="login-button" />
+
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

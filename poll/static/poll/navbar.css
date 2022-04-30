@@ -1,0 +1,82 @@
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.container-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgb(192, 99, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(192, 99, 255, 1) 0%,
+    rgba(255, 90, 90, 1) 51%,
+    rgba(255, 206, 138, 1) 100%
+  );
+  box-shadow: 0 8px 36px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-title {
+  margin-left: 100px;
+  margin-right: auto;
+  font-family: "Roboto Slab", serif;
+  font-weight: 800;
+  font-size: 2rem;
+  align-self: center;
+}
+
+.navbar-items ul {
+  margin-right: 100px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+}
+
+li {
+  margin: 30px 10px 30px 10px;
+}
+
+.nav-link {
+  display: block;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  /* background-color: rgb(70, 70, 70); */
+  color: rgb(235, 235, 235);
+  transition-duration: 200ms;
+}
+
+.nav-link:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(70, 70, 70);
+  box-shadow: 0 10px 35px 5px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+}
+
+a {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(228, 228, 228);
+}
+
+#login-button {
+  background-color: white;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+
+#login-button a {
+  color: rgb(75, 75, 75);
+}

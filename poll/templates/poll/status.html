@@ -1,0 +1,26 @@
+{% extends 'poll/base.html' %} {% block content %}
+
+<div class="container">
+  <h1 class="content-title">Signature Verification</h1>
+  <hr />
+  <div class="content">
+    <h3>Ballot : <code>{{ ballot }}</code></h3>
+    <p>
+      <b> Generated signature </b><br />
+      {{ signature }}
+    </p>
+    <br />
+    <p style="color:{% if error %} red {% else %} green {% endif %};">
+      <b>{{ status }}</b>
+    </p>
+
+    {% if not error %}
+    <form action="{% url 'seal' %}" method="POST">
+      {% csrf_token %}
+      <input name="ballot_input" type="hidden" value="{{ ballot }}" />
+      <button type="submit" class="form-item button" id="seal-ballot">Seal ballot</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

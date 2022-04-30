@@ -1,0 +1,52 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% comment %} <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> {% endcomment %}
+    <link href="{% static "poll/base.css" %}" rel="stylesheet">
+    <link href="{% static "poll/navbar.css" %}" rel="stylesheet">
+    <title>BlockVote</title>
+    <style>
+      .bg1 {
+        background-color: #dcdde1;
+        padding-top: 5%;
+        padding-bottom: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container-navbar">
+        <i class="fa-solid fa-square-poll-horizontal"></i>
+        <a class="navbar-title" href="#">BlockVote</a>
+        <div class="navbar-items">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "home" %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "verify" %}">Verify Votes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "result" %}">Results</a>
+            </li>
+            <li class="nav-item" id="login-button">
+              <a class="nav-link" href="{% url "login" %}">Login</a>
+            </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br><br><br>
+    <div class="container-content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

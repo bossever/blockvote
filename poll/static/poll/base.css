@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Slab&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-family: "Roboto Slab", serif;
+}
+
+.container-content {
+  background-color: rgb(255, 255, 255) !important;
+  margin: 50px 300px 50px 300px !important;
+  padding: 50px 200px 50px 200px !important;
+  /* border-radius: 30px; */
+  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+body,
+.container-content {
+  color: rgb(85, 85, 85);
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.form-item {
+  align-items: center;
+  align-self: center;
+}
+
+.form-item label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-item input {
+  margin: 10px 0px 10px 0px;
+  border-radius: 0;
+  border-style: none;
+  background-color: rgb(245, 245, 245);
+  height: 45px;
+  width: 250px;
+}
+
+.form-item input:focus {
+  outline: none;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255);
+}
+
+.button.form-item {
+  font-weight: bold;
+  height: 45px;
+  width: 150px;
+  border: none;
+  background: rgb(255, 122, 204);
+  color: white;
+  transition-duration: 200ms;
+}
+
+.button.form-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.content-title {
+  text-align: center;
+}
+
+.content {
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+.content p {
+  word-wrap: break-word;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  text-align: left;
+  padding: 10px;
+}
+
+.table th {
+  font-weight: bold;
+  color: white;
+  border-style: none;
+  background-color: rgb(255, 122, 204);
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.candidate-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.candidate-card {
+  margin: 10px;
+  padding: 10px;
+  flex: 1 1 0;
+  transition-duration: 200ms;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 4px 30px 2px rgba(0, 0, 0, 0.15);
+}
+
+.form-item.form-group input {
+  width: 260px;
+}
+
+#seal-ballot {
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+{% extends '../poll/base.html' %} {% block content %}
+
+<h1 class="form-item">Login to your account</h1>
+<br /><br />
+
+<form method="post" action="{% url 'login' %}" class="login-form">
+  {% csrf_token %}
+
+  <div class="form-item">
+    <label for="username" class="login-label">Username</label><br />
+    {{ form.username }}<br /><br />
+  </div>
+
+  <div class="form-item">
+    <label for="password" class="login-label">Password</label><br />
+    {{ form.password }}<br /><br /><br />
+  </div>
+
+  <input class="form-item button" type="submit" value="Login" />
+
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{% endblock %}
